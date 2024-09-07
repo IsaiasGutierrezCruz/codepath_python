@@ -1,0 +1,46 @@
+[project]
+name = "001-fluent-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.4",
+    "pytest>=8.3.2",
+    "nbval>=0.11.0",
+]
+	
+[tool.ruff]
+line-length = 90
+fix = true
+
+lint.select = [
+  "ALL",
+]
+
+lint.ignore = [
+  "ANN401",
+  "C901",
+  "COM812",
+  "D",
+  "DTZ001",
+  "E501",
+  "FIX",
+  "ISC001",
+  "PLR0913",
+  "PLR2004",
+  "RET505",
+  "TD003",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff.format]
+docstring-code-format = true
